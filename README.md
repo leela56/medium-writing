@@ -1,34 +1,49 @@
 # Medium Writing
 
-A curated collection of my technical articles published on Medium — covering Data Engineering, AI/ML, and Python.
+A curated collection of my technical articles published on Medium — covering Data Engineering, AI/ML, streaming systems, and production LLM pipelines.
 
-> **Medium Profile:** [medium.com/@leelasaikiran4](https://medium.com/@leelasaikiran4)
-
----
-
-## Published Articles
-
-### Data Engineering
-| Title | Published | Read Time | Link |
-|-------|-----------|-----------|------|
-| *(add your articles here)* | | | |
-
-### AI / ML
-| Title | Published | Read Time | Link |
-|-------|-----------|-----------|------|
-| *(add your articles here)* | | | |
-
-### Python
-| Title | Published | Read Time | Link |
-|-------|-----------|-----------|------|
-| *(add your articles here)* | | | |
+**Medium Profile:** [@leelasaikiran4](https://medium.com/@leelasaikiran4)
 
 ---
 
 ## Article Series
-| Series | Parts | Description |
-|--------|-------|-------------|
-| *(add series here)* | | |
+
+### ICU Active Data Systems *(3-part series)*
+
+Building an agentic AI pipeline on top of ICU streaming data — from a basic Spark deterioration detector through a full sepsis classifier to production-grade data contracts.
+
+| # | Title | Published | Medium |
+|---|-------|-----------|--------|
+| 1 | [Building Active Data Systems: Agentic AI Meets Spark Structured Streaming](./series/icu-active-data-systems/01-building-active-data-systems.md) | 2026-03-06 | [Read →](https://medium.com/@leelasaikiran4/building-active-data-systems-agentic-ai-meets-spark-structured-streaming-921292fcf298) |
+| 2 | [Why My AI Sepsis Detector Failed Until I Stopped Feeding It Raw Data](./series/icu-active-data-systems/02-ai-sepsis-detector.md) | 2026-03-17 | [Read →](https://medium.com/@leelasaikiran4/why-my-ai-sepsis-detector-failed-until-i-stopped-feeding-it-raw-data-8f3d6aceaaf2) |
+| 3 | [I Gave My Data Pipeline a Contract. It Broke on Day Two. That Was Fine.](./series/icu-active-data-systems/03-data-pipeline-contract.md) | 2026-06-08 | [Read →](https://medium.com/@leelasaikiran4/i-gave-my-data-pipeline-a-contract-it-broke-on-day-two-that-was-fine-4f722d2cac7f) |
+
+---
+
+## Standalone Articles
+
+### Data Engineering
+
+| Title | Published | Medium |
+|-------|-----------|--------|
+| [Your Data Pipeline Is Working Perfectly. That's the Problem.](./published/data-engineering/2026-06-01-pipeline-working-perfectly.md) | 2026-06-01 | [Read →](https://medium.com/@leelasaikiran4/your-data-pipeline-is-working-perfectly-thats-the-problem-18c0d5860163) |
+
+### AI / ML
+
+| Title | Published | Medium |
+|-------|-----------|--------|
+| [I Rechunked Once. It Beat Three Embedding Model Swaps.](./published/ai-ml/2026-06-16-rechunked-once.md) | 2026-06-16 | [Read →](https://medium.com/@leelasaikiran4/i-rechunked-once-it-beat-three-embedding-model-swaps-f902f320948d) |
+| [My LLM Agent Ran for Six Hours. It Did Nothing Useful. That Was My Fault.](./published/ai-ml/2026-06-20-llm-agent-six-hours.md) | 2026-06-20 | [Read →](https://medium.com/@leelasaikiran4/my-llm-agent-ran-for-six-hours-it-did-nothing-useful-that-was-my-fault-d43cdfbf99f3) |
+
+---
+
+## Writing Stats
+
+| Metric | Count |
+|--------|-------|
+| Published Articles | 6 |
+| Article Series | 1 |
+| Topics Covered | Data Engineering, AI/ML, RAG, Agentic AI, Streaming |
 
 ---
 
@@ -37,42 +52,31 @@ A curated collection of my technical articles published on Medium — covering D
 ```
 medium-writing/
 │
-├── published/                    # All published articles, grouped by topic
+├── published/                        # Standalone articles by topic
 │   ├── data-engineering/
-│   ├── ai-ml/
-│   └── python/
+│   └── ai-ml/
 │
-├── drafts/                       # Work in progress
+├── series/                           # Multi-part series
+│   └── icu-active-data-systems/      # 3-part series on agentic ICU pipelines
+│
+├── drafts/
 │   └── in-progress/
 │
-├── series/                       # Multi-part article series
-│
-├── assets/
-│   └── images/                   # Article images and diagrams
-│
-├── templates/
-│   └── article-template.md       # Reusable article starter
-│
-└── .github/
-    └── workflows/
-        └── link-checker.yml      # Auto-validate links on push
+├── assets/images/                    # Diagrams and screenshots
+├── templates/article-template.md     # Starter for new articles
+└── .github/workflows/link-checker.yml
 ```
 
 ---
 
-## Writing Stats
+## Start Reading
 
-| Metric | Count |
-|--------|-------|
-| Published Articles | 0 |
-| Total Series | 0 |
-| Topics Covered | 3 |
+New here? The series is the best entry point:
 
----
+**→ [Start with Part 1: Building Active Data Systems](./series/icu-active-data-systems/01-building-active-data-systems.md)**
 
-## How to Use This Repo
+Or jump straight to a standalone:
 
-- **Reading:** Browse `published/` by topic
-- **Following along:** Each article links back to the live Medium post
-- **Images:** All diagrams and screenshots are in `assets/images/`
-- **New article:** Copy `templates/article-template.md` to start fresh
+- **Opinion piece:** [Your Data Pipeline Is Working Perfectly. That's the Problem.](./published/data-engineering/2026-06-01-pipeline-working-perfectly.md)
+- **RAG practitioners:** [I Rechunked Once. It Beat Three Embedding Model Swaps.](./published/ai-ml/2026-06-16-rechunked-once.md)
+- **Agent builders:** [My LLM Agent Ran for Six Hours. It Did Nothing Useful.](./published/ai-ml/2026-06-20-llm-agent-six-hours.md)
